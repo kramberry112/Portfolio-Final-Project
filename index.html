@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Web Developer Portfolio</title>
+    <title>Mark Lawrence Dalaten - Portfolio</title>
     <meta name="description" content="Personal portfolio showcasing web development projects and skills">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kramberry112.github.io/Portfolio-Final-Project/">
+    <meta property="og:title" content="Mark Lawrence Dalaten - Web Developer Portfolio">
+    <meta property="og:description" content="Aspiring Web Developer passionate about creating beautiful, functional, and user-friendly web experiences. Explore my projects and skills.">
+    <meta property="og:image" content="https://kramberry112.github.io/Portfolio-Final-Project/images/photo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kramberry112.github.io/Portfolio-Final-Project/">
+    <meta property="twitter:title" content="Mark Lawrence Dalaten - Web Developer Portfolio">
+    <meta property="twitter:description" content="Aspiring Web Developer passionate about creating beautiful, functional, and user-friendly web experiences. Explore my projects and skills.">
+    <meta property="twitter:image" content="https://kramberry112.github.io/Portfolio-Final-Project/images/photo.jpg">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="author" content="Mark Lawrence Dalaten">
+    <meta name="keywords" content="web developer, portfolio, HTML, CSS, JavaScript, Laravel, React Native, student developer">
+    <link rel="canonical" href="https://kramberry112.github.io/Portfolio-Final-Project/">
+    
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +38,7 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <a href="#home" class="nav-logo">Your Name</a>
+                <a href="#home" class="nav-logo">Mark Lawrence Dalaten</a>
                 
                 <!-- Desktop Navigation -->
                 <ul class="nav-menu">
@@ -54,7 +76,7 @@
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        Hi, I'm <span class="highlight">Your Name</span>
+                        Hi, I'm <span class="highlight">Mark Lawrence Dalaten</span>
                     </h1>
                     <p class="hero-subtitle">Aspiring Web Developer</p>
                     <p class="hero-description">
@@ -67,9 +89,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="hero-img-placeholder">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
+                    <img src="images/photo.jpg" alt="Mark Lawrence Dalaten" class="hero-profile-img">
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -85,11 +105,7 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="images/profile.jpg" alt="Profile Picture" class="profile-img">
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user"></i>
-                            <p>Add your photo here</p>
-                        </div>
+                        <img src="images/photo.jpg" alt="Profile Picture" class="profile-img">
                     </div>
                     <div class="about-text">
                         <h3>Hello! I'm a passionate web developer.</h3>
@@ -106,7 +122,7 @@
                         <div class="about-highlights">
                             <div class="highlight-item">
                                 <i class="fas fa-graduation-cap"></i>
-                                <span>Computer Science Student</span>
+                                <span>BSIT Student</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-code"></i>
@@ -119,6 +135,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#skills">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </section>
 
@@ -240,6 +261,11 @@
                     </div>
                 </div>
             </div>
+            <div class="scroll-indicator">
+                <a href="#projects">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
         </section>
 
         <!-- Projects Section -->
@@ -257,25 +283,23 @@
                             <img src="images/project1.jpg" alt="Project 1 Screenshot">
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="#" class="project-link" title="View Live Demo">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="#" class="project-link" title="View Code">
+                                    <a href="https://github.com/kramberry112/assistrack" class="project-link" title="View Code" target="_blank">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Responsive Landing Page</h3>
+                            <h3 class="project-title">Assistrack</h3>
                             <p class="project-description">
-                                A fully responsive landing page built with HTML5, CSS3, and JavaScript. 
-                                Features smooth animations, mobile-first design, and clean user interface.
+                                A comprehensive web-based system for managing student assistants. Features online application forms, task assignment tracking, and performance monitoring to streamline recruitment and promote accountability.
                             </p>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">CSS</span>
                                 <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
                             </div>
                         </div>
                     </article>
@@ -286,25 +310,21 @@
                             <img src="images/project2.jpg" alt="Project 2 Screenshot">
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="#" class="project-link" title="View Live Demo">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="#" class="project-link" title="View Code">
+                                    <a href="https://github.com/kramberry112/react-native-bookworm" class="project-link" title="View Code" target="_blank">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Task Management App</h3>
+                            <h3 class="project-title">Bookworm</h3>
                             <p class="project-description">
-                                A dynamic task management application with CRUD operations, local storage, 
-                                and intuitive user interface for organizing daily tasks.
+                                A mobile bookstore application built with React Native and Node.js. Features book browsing, search functionality, user authentication, and shopping cart management for seamless book purchasing.
                             </p>
                             <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Local Storage</span>
-                                <span class="tech-tag">CSS Grid</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">MongoDB</span>
                             </div>
                         </div>
                     </article>
@@ -315,29 +335,31 @@
                             <img src="images/project3.jpg" alt="Project 3 Screenshot">
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="#" class="project-link" title="View Live Demo">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="#" class="project-link" title="View Code">
+                                    <a href="https://github.com/kramberry112/IRIS-dalaten" class="project-link" title="View Code" target="_blank">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Weather Dashboard</h3>
+                            <h3 class="project-title">IRIS System</h3>
                             <p class="project-description">
-                                A weather application that fetches real-time weather data using APIs. 
-                                Features location-based forecasts and clean, modern design.
+                                A biometric security system that uses iris recognition technology for individual identification and verification. Features advanced pattern analysis algorithms and secure authentication processes for reliable access control.
                             </p>
                             <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
                                 <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">API Integration</span>
-                                <span class="tech-tag">Flexbox</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">Laravel</span>
                             </div>
                         </div>
                     </article>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#contact">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </section>
 
@@ -362,21 +384,14 @@
                                 <i class="fas fa-envelope"></i>
                                 <div>
                                     <h4>Email</h4>
-                                    <a href="mailto:your.email@example.com">your.email@example.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fab fa-linkedin"></i>
-                                <div>
-                                    <h4>LinkedIn</h4>
-                                    <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                                    <a href="mailto:your.email@example.com">marklawrencedalaten24@gmail.com</a>
                                 </div>
                             </div>
                             <div class="contact-method">
                                 <i class="fab fa-github"></i>
                                 <div>
                                     <h4>GitHub</h4>
-                                    <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                                    <a href="https://github.com/kramberry112" target="_blank">github.com/yourusername</a>
                                 </div>
                             </div>
                         </div>
@@ -411,17 +426,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2025 Your Name. All rights reserved.</p>
-                    <p>Built with HTML5, CSS3, and lots of ☕</p>
+                    <p>&copy; 2025 Kram Berry. All rights reserved.</p>
+                    <p>Built with HTML5, CSS, and JavaScript</p>
                 </div>
                 <div class="footer-social">
-                    <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                    <a href="https://github.com/kramberry112" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:your.email@example.com" title="Email">
+                    <a href="mailto:marklawrencedalaten24@gmail.com" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>

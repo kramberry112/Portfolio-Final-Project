@@ -11,6 +11,7 @@
     function initializePortfolio() {
         setupMobileNavigation();
         setupSmoothScrolling();
+        setupScrollSnapBehavior();
         setupScrollAnimations();
         setupContactForm();
         setupSkillAnimations();
@@ -66,13 +67,22 @@
                 const targetSection = document.querySelector(targetId);
                 
                 if (targetSection) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = targetSection.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                    // For hero section, scroll to top
+                    if (targetId === '#home') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // For other sections, account for header height
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = targetSection.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                     
                     // Update active nav link
                     updateActiveNavLink(targetId);
@@ -90,6 +100,47 @@
             if (link.getAttribute('href') === activeId) {
                 link.classList.add('active');
             }
+        });
+    }
+
+    // Scroll Snap Behavior for Perfect Section Alignment
+    function setupScrollSnapBehavior() {
+        // Add scroll snap to sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.scrollSnapAlign = 'start';
+        });
+
+        // Enhanced scroll behavior for scroll indicators
+        const scrollIndicators = document.querySelectorAll('.scroll-indicator a');
+        scrollIndicators.forEach(indicator => {
+            indicator.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    
+                    // Calculate exact position to fit section in viewport
+                    let targetPosition;
+                    if (targetId === '#home') {
+                        targetPosition = 0;
+                    } else {
+                        targetPosition = targetSection.offsetTop - headerHeight;
+                    }
+                    
+                    // Smooth scroll with precise positioning
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    updateActiveNavLink(targetId);
+                }
+            });
         });
     }
 
